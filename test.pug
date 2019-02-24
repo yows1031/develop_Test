@@ -1,0 +1,195 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title 石巻バリアフリーマップ
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css', integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossorigin='anonymous')
+    link(rel='stylesheet', href='css/minato.css')
+  body.container
+    header
+      .head
+        div
+          h1 石巻バリアフリーマップ
+      .spMode
+        .nav.tabs.is-centered.is-boxed
+          .is-active
+            a(href='index.html')
+              span ・全体図
+          div
+            a(href='station.html')
+              span ・石巻駅前
+          div
+            a(href='sumiyoshi.html')
+              span
+                | ・住吉
+                br.br
+                | ・山下
+          div
+            a
+              span ・湊
+          div
+            a
+              span
+                | ・蛇田
+                br.br
+                | （東地区）
+          div
+            a
+              span
+                | ・蛇田
+                br.br
+                | （西地区）
+          div
+            a
+              span
+                | ・蛇田
+                br.br
+                | （西地区）
+          div
+            a
+              span ・渡波
+        .nav.tabs.is-centered.is-boxed
+          div
+            a
+              span ・稲井
+          div
+            a
+              span
+                | ・釜港
+                br.br
+                | ・大街道
+          div
+            a
+              span ・河北
+          div
+            a
+              span ・河南
+          div
+            a
+              span ・桃生
+          div
+            a
+              span ・北上
+          div
+            a
+              span ・雄勝
+          div
+            a
+              span ・萩浜
+          div
+            a
+              span ・牡鹿
+    main
+      .spMenu
+        i#spMenu.fas.fa-bars
+      .main
+        // サイドメニュー
+        #menu.hidden
+          ul
+            li.button.is-info.is-outlined
+              p 鹿妻西公園
+            li.button.is-info.is-outlined
+              p ヨークベニマル
+            li.button.is-info.is-outlined
+              p ローソン
+            li.button.is-info.is-outlined
+              p 薬王堂
+            li.button.is-info.is-outlined
+              p 松並公園
+            li.button.is-info.is-outlined
+              p.fontSmall
+                | 石巻市水産
+                br
+                | 総合振興センター
+            li.button.is-info.is-outlined
+              p アムズガーデン
+            li.button.is-info.is-outlined
+              p ダイナム
+            li.button.is-info.is-outlined
+              p.fontSmall
+                | 石巻市総合
+                br
+                | 福祉会館みなと荘
+            li.button.is-info.is-outlined
+              p 街角cafe桜
+        // 地図メニュー
+        .map
+          .button.is-info.icon_shikatsuma
+            p
+              | 鹿妻
+              br.spMode
+              | 西公園
+          .button.is-info.icon_york
+            p.fontSmall
+              | ヨーク
+              br.spMode
+              | ベニマル
+          .button.is-info.icon_lowSon
+            p ローソン
+          .button.is-info.icon_yakuodo
+            p 薬王堂
+          .button.is-info.icon_matsunami
+            p 松並公園
+          .button.is-info.icon_shinkoCenter
+            p.fontSmall2
+              | 石巻市水産総合
+              br
+              | 振興センター
+          .button.is-info.icon_amsGarden
+            p.fontSmall
+              | アムズ
+              br.spMode
+              | ガーデン
+          .button.is-info.icon_dainam
+            p ダイナム
+          .button.is-info.icon_minatoSo
+            p.fontSmall2
+              | 石巻市総合
+              br
+              | 福祉会館みなと荘
+          .button.is-info.icon_cafeSakura
+            p 街角cafe桜
+      // マスク
+      #mask.hidden
+      //
+        市役所
+        <table id="cityHall" class="hidden">
+        <tr class="pointTittle">
+        <th colspan="9"><p>石巻市役所</p></th>
+        </tr>
+        <tr class="infomation">
+        <td class="icon"><img src="icon/parking.png" width="30" height="30"></td><td class="text">専用駐車場</td><td class="sign">あり</td><td class="icon"><img src="icon/babybed_ng.png" width="30" height="30"></td><td class="text">ベビーベッド</td><td class="sign">なし</td><td class="icon"><img src="icon/multisheet_ng.png" width="30" height="30"></td><td class="text">マルチシート</td><td class="sign">なし</td>
+        </tr>
+        <tr class="infomation">
+        <td class="icon"><img src="icon/ostomate_ng.png" width="30" height="30"></td><td class="text">オストメイト</td><td class="sign">なし</td><td class="icon"><img src="icon/button.png" width="30" height="30"></td><td class="text">呼び出しボタン</td><td class="sign">あり</td><td class="icon"><img src="icon/showertoilet_ng.png" width="30" height="30"></td><td class="text">シャワートイレ</td><td class="sing">なし</td>
+        </tr>
+        <tr class="slide">
+        <td colspan="9" class="pic">
+        <i class="fas fa-chevron-circle-left" id="cityHallprev"></i>
+        <img src="img/pic/station/cityhall/cityhall1.jpg" id="cityHall_target">
+        <i class="fas fa-chevron-circle-right" id="cityHallnext"></i>
+        </td>
+        </tr>
+        <tr class="pointData">
+        <td colspan="9">
+        <div class="under">
+        <nav>
+        <ul class="subnav" id="cityhall_thumbnails">
+        </ul>
+        </nav>
+        <div id="cityHallBack">
+        <i class="fas fa-caret-square-up"></i>
+        <i class="fas fa-caret-square-left"></i>
+        </div>
+        </div>
+        </td>
+        </tr>
+        </table>
+    footer
+      .footer
+        .suport
+          p Suppoted By OpenStreetMap
+          img(src='img/itnav.png')
+    // <script src="js/station.js"></script>
